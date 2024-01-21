@@ -142,13 +142,32 @@ h3 {
   border: 2px solid #a775f1;
 }
 
+.grid-col-span-2{
+  grid-column:span 2; 
+}
+
+
 /* components */
 .testimonial-grid {
+
+  display: grid; 
+  gap: 1.5rem;
+  grid-template-columns:repeat(4, 1fr) ;
+
+   
+
   padding-block: 2rem;
   width: min(95%, 70rem);
   margin-inline: auto;
 }
 
+@media (min-width:40)
+
+.testimonial:last-child{
+  grid-column-start:4; 
+  grid-row-start:1;
+  grid-row-end:3;
+}
 .testimonial {
   font-size: var(--fs-400);
   padding: 2rem;
